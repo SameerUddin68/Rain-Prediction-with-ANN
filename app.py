@@ -15,7 +15,6 @@ print("Model Loaded")
 def home():
     return render_template("index.html")
 
-
 @app.route("/predict", methods=["GET", "POST"])
 @cross_origin()
 def predict():
