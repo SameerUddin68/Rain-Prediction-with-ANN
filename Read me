@@ -1,0 +1,57 @@
+Rain Prediction with Artificial Neural Networks (ANN)
+
+  Overview
+
+This project focuses on predicting rain using machine learning techniques, specifically employing Artificial Neural Networks (ANN). The goal is to develop a reliable weather prediction model based on historical data, enabling users to assess the likelihood of rain on a given day.
+
+  Project Structure
+
+1.  Model Training Notebook: 
+   - model_training.ipynb: Jupyter Notebook containing the code for training the ANN-based rain prediction model.
+
+2.  Trained Model: 
+   - `models `: Directory containing the trained machine learning model.
+     - model.pkl: Pickle file containing the trained ANN model for rain prediction.
+
+3.  HTML Templates: 
+   - `Template `: Directory containing HTML templates for the web application.
+     - index.html: Home page of the web application.
+     - predictor.html: Form for user input and rain prediction display.
+     - rain.html: Template for displaying predictions for rainy weather.
+     - sunny.html: Template for displaying predictions for non-rainy weather.
+
+4.  Static Files: 
+   - `static `: Directory containing static files such as images, stylesheets, etc.
+
+5.  Python Script: 
+   - app.py: Python script for running the web application.
+
+6.  Data Preparation: 
+   - prep.pkl: Contains the data pre processor.
+   
+7.  Dataset: 
+   - weatherAUS.csv: CSV file containing historical weather data used for training and testing.
+
+8.  Requirements: 
+   - requirements.txt: File listing all the Python libraries and dependencies required to run the project.
+
+  How to Run
+
+1. Create virtual environment 
+2. Install dependencies using pip install -r requirements.txt.
+3. Run the web application using python app.py.
+4. Access the application in your web browser at http://127.0.0.1:5000
+
+  Notes
+
+- Make sure to have Python installed on your machine.
+- Ensure all dependencies are installed using pip install -r requirements.txt.
+- The trained ANN model (model.pkl) is used by the web application for rain predictions.
+
+  Project Specifics
+
+- The ANN model utilizes historical weather features to make accurate rain predictions.
+- The web application provides an intuitive interface for users to input weather parameters and obtain predictions.
+- Explore and customize the application based on your preferences and data insights.
+
+Happy predicting!

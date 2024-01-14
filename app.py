@@ -1,5 +1,6 @@
 import datetime
-import pickle
+
+import joblib
 
 import numpy as np
 import pandas as pd
@@ -7,13 +8,41 @@ from flask import Flask, jsonify, render_template, request, url_for
 from flask_cors import cross_origin
 
 app = Flask(__name__, template_folder="template")
-model = pickle.load(open("./models/model.pkl", "rb"))
-print("Model Loaded")
+
+def load_model():
+    """Loads the model from the specified model path."""
+
+    MODEL_PATH = "./models/model.pkl"
+    model = joblib.load(open(MODEL_PATH, "rb"))
+    print("Model Loaded")
+    return model
+
+
+def preprocessor(input_lst:list) -> np.ndarray:
+    """Prepares the input user data for the model"""
+    
+    SCALAR_PATH = "prep.pkl"
+
+    # convert into 2D numpy array for scaling
+    input_lst = np.array(input_lst).reshape(1,-1)
+    
+    scalar = joblib.load(open(SCALAR_PATH, "rb"))
+    print("Scaler Loaded")
+
+    return scalar.transform(input_lst)
+
+
+
+
+
+
+
 
 @app.route("/", methods=["GET"])
 @cross_origin()
 def home():
     return render_template("index.html")
+
 
 @app.route("/predict", methods=["GET", "POST"])
 @cross_origin()
@@ -56,15 +85,15 @@ def predict():
         # Cloud 3pm
         cloud3pm = float(request.form["cloud3pm"])
         # Cloud 3pm
-        location = float(request.form["location"])
+        location = int(request.form["location"])
         # Wind Dir 9am
-        winddDir9am = float(request.form["winddir9am"])
+        winddDir9am = int(request.form["winddir9am"])
         # Wind Dir 3pm
-        winddDir3pm = float(request.form["winddir3pm"])
+        winddDir3pm = int(request.form["winddir3pm"])
         # Wind Gust Dir
-        windGustDir = float(request.form["windgustdir"])
+        windGustDir = int(request.form["windgustdir"])
         # Rain Today
-        rainToday = float(request.form["raintoday"])
+        rainToday = int(request.form["raintoday"])
 
         input_lst = [
             location,
@@ -91,13 +120,17 @@ def predict():
             month,
             day,
         ]
-        
+        print(input_lst)
+
+        input_lst = preprocessor(input_lst)
+
+        model = load_model()
         pred = model.predict(input_lst)
-        output = pred
-        if output == 0:
-            return render_template("after_sunny.html")
+        if pred[0][0] > 0.5:
+             return render_template("rain.html")
         else:
-            return render_template("after_rainy.html")
+            return render_template("sunny.html")
+           
     return render_template("predictor.html")
 
 

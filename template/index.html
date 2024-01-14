@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RainCast AI</title>
-    <link rel="stylesheet" href={{url_for('static',filename='style1.css')}}>
+    <link rel="stylesheet" href={{url_for('static',filename='mystyles.css')}}>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
   </head>
   <body>
@@ -30,65 +30,99 @@
         <div class="info">
           <h2>Plant Trees <br><span>Save Rain</span></h2>
           <p> "Plant trees to bring the rains and get rid of the summer's heat.” - Trees help reduce and moderate the temperature and climate, which is why it is so important that we have more of them</p>
-          <a href="#about" class="info-btn">More info</a>
         </div>
-      </div>
-      <div class="media-icons">
-        <a href="https://github.com/Vasanthengineer4949"><i class="fab fa-github"></i></a>
       </div>
     </section>
 
     <section id="about">
       <h2>About RainCast AI</h2>
-      <p class="about-content" style="text-align: center;">RainCast AI is a web app which has 
-      an Artifical Neural Network running at the back. The purpose of developing this app is to 
-      predict whether it will rain the next day or not. This model is based on the Rain Prediction
-      in Australia dataset. The codes for this project can be checked in my <a href="https://github.com/Vasanthengineer4949/RainPrediction" style="color: black; font-weight: bold;">github repo</a>. More than 80% of Australia has an annual rainfall of less than 
-      600 mm which is less among the all continents other than Antartica which recieves less 
-      rainfall. A place inland near Lake Eyre would only receive 81 mm of rain annually. The 
-      average annual rainfall in the Australian desert is low, ranging from 81 to 250 mm. 
-      Thunderstorms are relatively common in the region, with an annual average of 15 to 20 
-      thunderstorms. The southern parts of Australia get the usual westerly winds and 
-      rain-bearing cold fronts that come when high–pressure systems move towards northern 
-      Australia during winter. Cold snaps may bring frosts inland, though temperatures near the
-      coast are mild or near mild all year round. Summers in southern Australia are generally 
-      dry and hot with coastal sea breezes. During a lengthy dry spell, hot and dry winds from 
-      the interior can cause bushfires in some southern and eastern states, though most commonly
-      Victoria and New South Wales. The tropical areas of northern Australia have a wet summer 
-      because of the monsoon. During "the wet", typically October to April, humid north-westerly
-       winds bring showers and thunderstorms. Occasionally, tropical cyclones can bring heavy 
-       rainfall to tropical coastal regions, which is also likely to reach further inland. 
-      </p>
+      <p class="about-content" style="text-align: center;">
+        RainCast AI is a web application powered by an Artificial Neural Network designed to predict whether it will rain on the following day. This predictive model is based on the Rain Prediction in Australia dataset. Over 80% of Australia receives less than 600 mm of annual rainfall, ranking it among the continents with the lowest precipitation, excluding Antarctica. Inland areas, such as those near Lake Eyre, may receive as little as 81 mm of rainfall annually. The Australian desert typically experiences a low average annual rainfall ranging from 81 to 250 mm, with around 15 to 20 thunderstorms per year.
+    </p>
+    
+    <p class="about-content" style="text-align: center;">
+        Southern Australia is characterized by westerly winds and rain-bearing cold fronts during winter, driven by high-pressure systems moving northward. Cold snaps may lead to frosts inland, while coastal temperatures remain mild throughout the year. Summers in southern Australia are generally dry and hot, with coastal sea breezes. Extended dry periods can result in bushfires, particularly in Victoria and New South Wales.
+    </p>
+    
+    <p class="about-content" style="text-align: center;">
+        Conversely, tropical regions in northern Australia experience a wet summer due to the monsoon season, occurring typically from October to April. Humid north-westerly winds during "the wet" bring showers and thunderstorms. Tropical cyclones may also contribute to heavy rainfall along coastal areas, extending further inland. 
+    </p>
+    
     </section>
 
     
     <section id="info">
-      <div>
-        <img src="../static/vasanth1.png" alt="Vasanth">
-      </div>
-      <div>
         <h2>Our Team</h2>
-        <p class="about-content"> Hi, I'm Vasanth, a Data Scientist 🚀 from India. 
-          Currently, I'm learning ML, DL, CV & NLP. I have an experience as a Data Science Intern in a 
-          company called prithvi.ai situated at Noida for around three months. Now currently I am trying
-          to do some self - paced projects in data science like RainCast AI, Smart Attendance System, 
-          J.A.R.V.I.S, etc.. I also have experience of taking webinars in my college. I am also trying
-          to do some projects for my college too. Always curious to learn something new in
-          the field of Data Science. Beside's programming, I enjoy playing games and watching youtube. 
-          Below I have given my social media links. Happy to have new connections.</p>
-      </div>
+        <div class="container">
+          <div class="our-team" >
+            <div class="pic">
+              <img src="../static/coder.jpg" alt="hi">
+            </div>
+            <div class="team-content">
+              <h3 class="title">Hussain</h3>
+              <span class="post">Developer</span>
+            </div>
+            <ul class="social">
+              <li><a href="#" class="fab fa-github" style="color: black;font-size: 30px;""></a></li>
+              <li><a href="#" class="fab fa-linkedin" style="color: black;font-size: 30px;"></a></li>
+            </ul>
+          </div>
+
+          <div class="our-team" >
+            <div class="pic">
+              <img src="../static/coder.jpg" alt="hi">
+            </div>
+            <div class="team-content">
+              <h3 class="title">Sameer</h3>
+              <span class="post">Developer</span>
+            </div>
+            <ul class="social">
+              <li><a href="#" class="fab fa-github" style="color: black;font-size: 30px;"></a></li>
+              <li><a href="#" class="fab fa-linkedin" style="color: black;font-size: 30px;"></a></li>
+            </ul>
+          </div>
+
+          <div class="our-team">
+            <div class="pic">
+              <img src="../static/coder.jpg" alt="hi">
+            </div>
+            <div class="team-content">
+              <h3 class="title">Farooq</h3>
+              <span class="post">Developer</span>
+            </div>
+            <ul class="social">
+              <li><a href="#" class="fab fa-github" style="color: black; font-size: 30px;"></a></li>
+              <li><a href="#" class="fab fa-linkedin" style="color: black; font-size: 30px;"></a></li>
+            </ul>
+          </div>
+          <div class="our-team">
+            <div class="pic">
+              <img src="../static/coder1.jpg" alt="hi">
+            </div>
+            <div class="team-content">
+              <h3 class="title">Aiman</h3>
+              <span class="post">Developer</span>
+            </div>
+            <ul class="social">
+              <li><a href="#" class="fab fa-github" style="color: black;font-size: 30px;"></a></li>
+              <li><a href="#" class="fab fa-linkedin" style="color: black;font-size: 30px;"></a></li>
+            </ul>
+          </div>
+        </div>
+    
     </section>
 
     <footer>
       <p>
-        Made with ❤️
-      </p> 
+          Crafted with passion and dedication.
+      </p>
       <div class="media-icons">
-        <a href="https://www.linkedin.com/in/vasanth-p-90826218b/"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/Vasanthengineer4949"><i class="fab fa-github"></i></a>
-        <a href="https://twitter.com/V51430"><i class="fab fa-twitter"></i></a>
+          <!-- You can customize or add more icons here as needed -->
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
       </div>
-    </footer>
+  </footer>
+  
 
   </body>
 </html>
